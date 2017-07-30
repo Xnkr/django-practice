@@ -9,7 +9,7 @@ class Album(models.Model):
 	artist = models.CharField(max_length=20)
 	album_name = models.CharField(max_length=20)
 	genre = models.CharField(max_length=20)
-	album_logo = models.CharField(max_length=1000)
+	album_logo = models.FileField()
 
 	def __str__(self):
 		return self.album_name + " - " + self.artist
